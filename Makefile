@@ -57,6 +57,7 @@ lint:
 	@echo '---Running autopep8---'
 	poetry run autopep8 ramailo -r -d
 	poetry run autopep8 ramailo -r -i
+	poetry run isort ramailo
 
 coverage:
 	@echo 'Running tests and making coverage files'
