@@ -1,7 +1,7 @@
-from shared.helpers.logging_helper import logger
 from ramailo.models.user import User
-from ramailo.services.otp_service import OtpService
 from ramailo.services.auth_service import generate_token
+from ramailo.services.otp_service import OtpService
+from shared.helpers.logging_helper import logger
 
 
 class OnboardingService():

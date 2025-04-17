@@ -1,7 +1,7 @@
 from rest_framework.permissions import IsAuthenticated
 
-from ramailo.helpers.view_helper import get_auth_token
 from ramailo.helpers.user_helper import get_current_user
+from ramailo.helpers.view_helper import get_auth_token
 
 
 class IsDeviceAuthenticated(IsAuthenticated):
