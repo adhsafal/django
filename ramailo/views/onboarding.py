@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 from ramailo.builders.response_builder import ResponseBuilder
+from ramailo.helpers.user_helper import get_current_user
 from ramailo.helpers.view_helper import get_auth_token
 from ramailo.openapi.schema import PROFILE_API
 from ramailo.serializers.onboarding_serializer import (
@@ -11,7 +12,6 @@ from ramailo.serializers.onboarding_serializer import (
     OnboardingSerializer,
 )
 from ramailo.services.onboarding_service import OnboardingService
-from ramailo.helpers.user_helper import get_current_user
 from shared.helpers.logging_helper import logger
 
 

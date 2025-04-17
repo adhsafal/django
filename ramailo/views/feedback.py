@@ -2,11 +2,11 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 
 from ramailo.builders.response_builder import ResponseBuilder
+from ramailo.helpers.user_helper import get_current_user
 from ramailo.serializers.feedback_serializer import (
     FeedbackSerializer,
     RaiseTicketSerializer,
 )
-from ramailo.helpers.user_helper import get_current_user
 from shared.helpers.logging_helper import logger
 
 

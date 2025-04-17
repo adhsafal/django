@@ -6,10 +6,10 @@ from rest_framework.routers import DefaultRouter
 
 from ramailo.views import health
 from ramailo.views.feedback import feedback, raise_ticket
+from ramailo.views.kyc import set_email, verify_email
 from ramailo.views.notification import set_fcm_device
 from ramailo.views.onboarding import LoginView, OtpView, logout
 from ramailo.views.user import ProfileView
-from ramailo.views.kyc import set_email, verify_email
 
 from .openapi_info import openapi_info
 

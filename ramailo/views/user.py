@@ -6,6 +6,7 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.exceptions import InvalidToken
 
 from ramailo.builders.response_builder import ResponseBuilder
+from ramailo.helpers.user_helper import get_current_user
 from ramailo.middlewares.device_authentication import IsDeviceAuthenticated
 from ramailo.openapi.schema import PROFILE_API
 from ramailo.serializers.user_serializer import (
@@ -13,7 +14,6 @@ from ramailo.serializers.user_serializer import (
     ProfileUpdateSerializer,
 )
 from ramailo.services.user_service import UserService
-from ramailo.helpers.user_helper import get_current_user
 from shared.helpers.logging_helper import logger
 
 
