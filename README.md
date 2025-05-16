@@ -1,5 +1,19 @@
 # Django Starter - Ramailo
 
+### Setting up as starter
+1. Set the django-starter repo as a starter code to your existing repo
+```bash
+git remote add starter git@github.com:RamailoTech/django-starter.git
+```
+2. Pull the django-starter code
+```bash
+git pull starter main
+```
+3. Push the code to your repository
+```bash
+git push origin main
+```
+
 ### Requirements
 1. Make sure you have installed python3 [Recommended : Python 3.11.4]
 2. Setup virtualenv
