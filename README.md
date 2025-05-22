@@ -15,8 +15,9 @@ git push origin main
 ```
 
 ### Requirements
-1. Make sure you have installed python3 [Recommended : Python 3.11.4]
-2. Setup virtualenv
+1. Make sure you have installed python3 along with venv [Recommended : Python 3.11.4]
+[link](https://www.hostinger.com/in/tutorials/how-to-create-a-python-virtual-environment)
+3. Setup virtualenv
 ```
 $ python3 -m venv venv
 ```
