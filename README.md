@@ -28,7 +28,14 @@ source venv/bin/activate
 
 ### Run the app in terminal
 
-1. Start a Postgres database server on your machine or in the cloud.
+1. Start a Postgres database on your local machine using docker.
+Requirements:
+- [Docker](https://docs.docker.com/engine/install/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+```
+make rundb
+```
+
 2. Set the values in env.uat as per .env.example file
 
 ```
@@ -38,20 +45,30 @@ $ make migrate
 $ make dev
 ```
 
-3. Setup a password to login to the Django admin dashboard.
+### Check if the server is running by visiting the health endpoint
+
+1. Go to [http://localhost:8000/health](http://localhost:8000/health) to see the health of the server.
+
+### Setting up the admin user
+
+1. Setup a password to login to the Django admin dashboard.
 
 ```
 make adminuser password=<choose-a-secure-password>
 ```
 
-4. Create a new app. Run following from root folder
+2. Go to [http://localhost:8000/admin](http://localhost:8000/admin) and login to the dashboard using username `admin` and the password you chose in step 1 above.
+
+### Create a new app
+
+1. Create a new app. Run following from root folder
 
 ```
 python manage.py startapp [app_name]
 
 ```
 
-5. Start celery worker, beat and flower admin.
+### Start celery worker, beat and flower
 
 ```
 $ make worker
@@ -63,8 +80,6 @@ $ make flower password=<choose-a-secure-password>
 
 1. Go to [http://localhost:8000/swagger](http://localhost:8000/swagger) to see Swagger documentation for API endpoints.
 2. Run the APIs by clicking the "Try it now" button on the Swagger page.
-
-2. Go to [http://localhost:8000/admin](http://localhost:8000/admin) and login to the dashboard using username `admin` and the password you chose in step 1 above.
 
 ### Run tests and check code coverage
 
