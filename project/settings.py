@@ -13,7 +13,7 @@ from django.utils.log import DEFAULT_LOGGING
 
 from sentry_sdk.integrations.django import DjangoIntegration
 
-config = dotenv_values(".env.uat")
+config = dotenv_values(".env.dev")
 
 for key, value in config.items():
     os.environ[key] = value

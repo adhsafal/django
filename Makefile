@@ -46,7 +46,7 @@ run:
 	poetry run gunicorn project.wsgi:application --bind localhost:8000
 
 rundb:
-	poetry run docker-compose up db
+	poetry run docker compose up db
 
 shell:
 	@echo 'Starting poetry shell. Press Ctrl-d to exit from the shell'
