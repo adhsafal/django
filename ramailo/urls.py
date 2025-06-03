@@ -10,6 +10,7 @@ from ramailo.views.kyc import set_email, verify_email
 from ramailo.views.notification import set_fcm_device
 from ramailo.views.onboarding import LoginView, OtpView, logout
 from ramailo.views.user import ProfileView
+from ramailo.views.blog import create_blog, get_all_blog, get_blog, update_blog, delete_blog, posts_view, post_detail_view
 
 from .openapi_info import openapi_info
 
@@ -59,6 +60,14 @@ api_paths = [
 
     # fcm device
     path('fcm/register/', set_fcm_device, name='register_fcm_device'),
+    
+    # path('posts/', create_blog, get_all_blog , name="create blog"),
+    # path('posts/<id>/', get_blog , name="get blog"),
+    # path('posts/<id>/', update_blog, name='update blog'),
+    # path('posts/<id>/', delete_blog, name='delete blog'),
+    
+    path('posts/', posts_view, name='posts'),
+    path('posts/<int:id>/', post_detail_view, name='post_detail'),
 
 ]
 
